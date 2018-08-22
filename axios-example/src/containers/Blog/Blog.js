@@ -18,9 +18,12 @@ class Blog extends Component {
                 this.setState({ posts: response.data });
                 // console.log(response);
             });
+        console.log('[Blog] inside componentDidMount');
     }
 
     render() {
+
+        console.log('[Blog] inside render');
 
         const posts = this.state.posts.map(post => {
             return <Post key={post.id} title={post.title} />
