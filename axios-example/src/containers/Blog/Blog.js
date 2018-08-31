@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
-import axios from '../../axios';
 import { Route } from 'react-router-dom';
 
 import './Blog.css';
@@ -21,8 +20,9 @@ class Blog extends Component {
                         </ul>
                     </nav>
                 </header>
-                <Route path="/" exact render={() => <h1>HOME</h1>} />
-                <Route path="/" render={() => <h1>HOME 2</h1>} />
+                {/* <Route path="/" exact render={() => <h1>HOME</h1>} />
+                <Route path="/" render={() => <h1>HOME 2</h1>} /> */}
+                <Route path="/" exact component={Posts} />
             </div>
         );
     }
