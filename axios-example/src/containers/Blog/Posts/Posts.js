@@ -44,6 +44,8 @@ class Posts extends Component {
                     key={post.id}
                     title={post.title}
                     author={post.author}
+                    // {...this.props} // spreading the route related properties to child components
+                    // other way is to use higher order component on child component Post
                     clicked={() => this.postSelectedHandler(post.id)} />
             });
         }
