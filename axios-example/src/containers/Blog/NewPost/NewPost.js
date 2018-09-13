@@ -26,7 +26,9 @@ class NewPost extends Component {
         axios.post('/posts', data)
             .then(response => {
                 console.log(response);
-                this.setState({ submitted: true });
+                this.props.history.replace('/posts'); // using history.push will allow user to go back by clicking back in browser.
+                // push pushes the page to page stack while replace replaces so going back does NOT work in replace.
+                // this.setState({ submitted: true });
             });
     }
 
